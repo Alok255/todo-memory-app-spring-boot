@@ -2,10 +2,10 @@
 
 This TODO Memory is Java Application
 built using [Spring Boot](https://spring.io/projects/spring-boot), 
-[Spring Data JPA](https://spring.io/projects/spring-data-jpa) and 
-[H2 in memory database](https://www.h2database.com/html/main.html).
+[Spring Data JPA](https://spring.io/projects/spring-data-jpa), 
+[H2 in memory database](https://www.h2database.com/html/main.html) and [MySQL Connector Java](https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-installing-maven.html).
 
-The TODO Memory RESTful API is implemented as a Spring Boot app running an embedded version of [Tomcat](http://tomcat.apache.org/). For demonstration purposes, the data store is a H2 in-memory database accessed via Spring JPA.
+The TODO Memory RESTful API is implemented as a Spring Boot app running an embedded version of [Tomcat](http://tomcat.apache.org/). For demonstration purposes, the data store is a H2 in-memory and MySQL database accessed via Spring JPA.
 
 # Table of Contents
 1. [Build and Run](#build-and-run)
