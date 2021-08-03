@@ -19,8 +19,11 @@ The TODO Memory RESTful API is implemented as a Spring Boot app running an embed
  1. Create Application Configuration under springtodolist module
  2. Set Main Class
  	  com.spring.todolist.SpringtodolistApplication
- 	
-  #### [From Docker](https://docs.docker.com/language/java/build-images/)
+ 
+ ## Dockerising Spring Boot application with Mysql Database
+   Then open the “**Dockerfile**” from the project folder
+   This contains the commands for generating Docker image	
+  #### [Run From Docker](https://docs.docker.com/language/java/build-images/)
         $ docker build --tag springtodolist .
          
         $ docker images
@@ -32,6 +35,14 @@ The TODO Memory RESTful API is implemented as a Spring Boot app running an embed
         $ docker kill <CONTAINER ID>
         
         $ docker rmi <IMAGE ID>
-        
+  #### [Run From Docker Compose](https://docs.docker.com/get-started/08_using_compose/)
+          $ docker-compose build ##Create the build with docker compose to build docker image using built jar file.
+           
+          $ docker-compose up -d ##Start up the application stack using the docker-compose up command. add the -d flag to run everything in the background.
+          
+          $ docker-compose down ##To tear it all down, hit this command, the containers will stop and the network will be removed.
+          
+          $ docker-compose up 
+          
  # Contributors
    This project welcomes contributions and suggestions. 	      

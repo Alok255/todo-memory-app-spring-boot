@@ -1,0 +1,24 @@
+version: '3'
+services:
+  mysqldb-service: ##MySQL DB which runs on port 3306
+    image: 'mysql:5.7'
+    environment:
+      - MYSQL_USER=${db.username}
+      - MYSQL_ROOT_PASSWORD=${db.password}
+      - MYSQL_PASSWORD=${db.password}
+      - MYSQL_DATABASE=${db.name}
+    ports:
+      - "3307:3306"
+  apiservice-docker-container: ##Spring Boot REST API which runs on port 8080.
+    image: apiservice-docker-container
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysqldb-service:3306/${db.name}?autoReconnect=true&useSSL=false
+      SPRING_DATASOURCE_USERNAME: ${db.username}
+      SPRING_DATASOURCE_PASSWORD: ${db.password}
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+    depends_on:
+      - mysqldb-service
