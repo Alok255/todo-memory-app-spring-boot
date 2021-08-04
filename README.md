@@ -21,8 +21,13 @@ The TODO Memory RESTful API is implemented as a Spring Boot app running an embed
  	  com.spring.todolist.SpringtodolistApplication
  
  ## Dockerising Spring Boot application with Mysql Database
-   Then open the “**Dockerfile**” from the project folder
-   This contains the commands for generating Docker image	
+   Download and install Docker for windows/Linux/mac from the official website https://hub.docker.com/
+   
+   Then open the “**Dockerfile**” from the project folder.
+   This contains the commands for generating Docker image.
+
+   **Note:-** Always run these command from the project folder, where **Dockerfile** and **docker-compose.yml** file is located.
+ 
   #### [Run From Docker](https://docs.docker.com/language/java/build-images/)
         $ docker build --tag springtodolist .
          
