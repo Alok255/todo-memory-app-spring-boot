@@ -33,7 +33,7 @@ The TODO Memory RESTful API is implemented as a Spring Boot app running an embed
          
         $ docker images
         
-        $ docker run --detach --publish 8080:8080 springtodolist -e DB_NAME=db_username -e DB_PASSWORD=db_password -e DB_ROOT_PASSWORD=db_root_password -e DB_USER_NAME=db_name -e SPRING_DB_URL=spring_datasource_url
+        $ docker run --detach --publish 8080:8080 springtodolist -e DB_USER_NAME=db_username -e DB_PASSWORD=db_password -e DB_ROOT_PASSWORD=db_root_password -e DB_NAME=db_name -e SPRING_DB_URL=spring_datasource_url
         
         $ docker ps -a
         
