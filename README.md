@@ -26,14 +26,14 @@ The TODO Memory RESTful API is implemented as a Spring Boot app running an embed
    Then open the “**Dockerfile**” from the project folder.
    This contains the commands for generating Docker image.
 
-   **Note:-** Always run these command from the project folder, where **Dockerfile** and **docker-compose.yml** file is located.
+   **Note:-** Always run these commands from the project folder, where **Dockerfile** and **docker-compose.yml** file located, and add your database credentials in the .env file.
  
   #### [Run From Docker](https://docs.docker.com/language/java/build-images/)
         $ docker build --tag springtodolist .
          
         $ docker images
         
-        $ docker run --detach --publish 8080:8080 springtodolist -e db.username=db_username -e db.password=db_password -e db.name=db_name
+        $ docker run --detach --publish 8080:8080 springtodolist -e DB_NAME=db_username -e DB_PASSWORD=db_password -e DB_ROOT_PASSWORD=db_root_password -e DB_USER_NAME=db_name -e SPRING_DB_URL=spring_datasource_url
         
         $ docker ps -a
         
